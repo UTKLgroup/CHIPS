@@ -1,0 +1,21 @@
+/run/initialize
+
+/control/execute defaults.mac
+
+#detector setup
+/control/execute detector.mac
+
+#cosmic ray or pencil beam
+/control/execute cmd.file
+#/control/execute beam.mac
+
+#This causes the primary particle to be killed after its first step in the
+#scintillator volume. Thus preventing the cerenkov cone to fill in.
+#/LXe/oneStepPrimaries true
+
+/LXe/eventVerbose 1
+
+#disable the visulization
+/vis/enable false
+
+/run/beamOn 100

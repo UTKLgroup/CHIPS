@@ -1,0 +1,24 @@
+/run/initialize
+/control/execute defaults_vis.mac
+
+/LXe/oneStepPrimaries false
+
+#detector setup
+/control/execute detector_chips_module.mac
+
+#visualization
+/control/execute vis.mac
+
+#cosmic ray or pencil beam
+#/control/execute cmd.file
+/control/execute beam__module_chips_detector.mac
+#/control/execute cmd__module_chips_detector.file
+
+/LXe/eventVerbose 2
+
+/LXe/pmtThreshold 3
+
+#/vis/open
+#/control/execute wls.mac
+/run/beamOn 1
+

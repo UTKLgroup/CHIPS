@@ -1,0 +1,50 @@
+/run/initialize
+
+/control/verbose 2
+/run/verbose 2
+
+/vis/open OGLI 650x650-0+0
+
+#Resets all defaults
+/LXe/detector/defaults
+/LXe/detector/update
+
+/LXe/eventVerbose 0 
+/tracking/storeTrajectory 1
+
+#This causes the primary particle to be killed after its first step
+/LXe/oneStepPrimaries false
+
+#####detector setup
+# full chips
+/control/execute detector_chips.mac
+# 1 module with same spacing as full
+#/control/execute detector_chips_module.mac
+
+#disable the visualization
+/vis/enable true
+/vis/drawVolume	
+/vis/viewer/set/viewpointThetaPhi 100. 270.
+/vis/viewer/set/style wireframe
+/vis/viewer/set/autoRefresh true
+
+/vis/scene/add/trajectories 
+/tracking/storeTrajectory 1
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set mu- blue
+/vis/modeling/trajectories/drawByParticleID-0/set opticalphoton green
+
+
+#cosmic ray
+/control/execute cmd.file
+
+/LXe/eventVerbose 2
+
+# threshold set in detector file
+#/LXe/pmtThreshold 3
+
+#/vis/open
+#/control/execute wls.mac
+#/vis/scene/endOfEventAction accumulate
+/run/beamOn 10
+

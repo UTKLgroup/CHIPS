@@ -1,0 +1,22 @@
+/run/initialize
+/control/execute defaults.mac
+
+#####detector setup
+# full chips
+/control/execute detector_chips.mac
+# 1 module with same spacing as full
+#/control/execute detector_chips_module.mac
+
+#cosmic ray
+/control/execute cmd.file
+
+/LXe/eventVerbose 2
+
+# threshold set in detector file
+#/LXe/pmtThreshold 3
+
+#/vis/open
+#/control/execute wls.mac
+/run/beamOn 200
+
+

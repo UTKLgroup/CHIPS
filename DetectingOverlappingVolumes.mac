@@ -1,0 +1,4 @@
+#geometry/test/tolerance 1E-4
+/geometry/test/grid_test true
+/geometry/test/cylinder_test true
+/geometry/test/line_test true

@@ -1,0 +1,61 @@
+#!/bin/csh
+#SBATCH -J Nemo          # Job name
+#SBATCH -N 1                   # Total number of nodes (16 cores/node)
+#SBATCH -n 16                  # Total number of mpi tasks
+#SBATCH -p normal              # Queue name -- normal, development, etc.
+#SBATCH -o Nemo.o%j      # Name of stdout output file (%j expands to jobid)
+#SBATCH -t TIME            # Run time (hh:mm:ss)
+#SBATCH -A NEMO
+
+
+module load launcher
+setenv EXECUTABLE     $TACC_LAUNCHER_DIR/init_launcher 
+setenv CONTROL_FILE   commandslist
+setenv WORKDIR        ${WORK}/programs/CHIPS
+
+
+#----------------
+# Error Checking
+#----------------
+
+if ( ! -e $WORKDIR ) then
+        echo " "
+	echo "Error: unable to change to working directory."
+	echo "       $WORKDIR"
+	echo " "
+	echo "Job not submitted."
+	exit
+endif
+
+if ( ! -f $EXECUTABLE ) then
+	echo " "
+	echo "Error: unable to find launcher executable $EXECUTABLE."
+	echo " "
+	echo "Job not submitted."
+	exit
+endif
+
+if ( ! -f $WORKDIR/$CONTROL_FILE ) then
+	echo " "
+	echo "Error: unable to find input control file $CONTROL_FILE."
+	echo " "
+	echo "Job not submitted."
+	exit
+endif
+
+
+#----------------
+# Job Submission
+#----------------
+
+cd $WORKDIR/
+
+
+$TACC_LAUNCHER_DIR/paramrun $EXECUTABLE $CONTROL_FILE
+
+echo " "
+echo " Parameteric Job Complete"
+echo " "
+
+
+

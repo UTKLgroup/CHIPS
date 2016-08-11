@@ -1,0 +1,20 @@
+/run/initialize
+/control/execute defaults.mac
+
+#####detector setup
+# full chips
+/control/execute detector_chips_module.mac
+
+#cosmic ray
+/control/execute beam__module_chips_detector.mac
+
+/LXe/eventVerbose 2
+
+# threshold set in detector file
+#/LXe/pmtThreshold 3
+
+#/vis/open
+#/control/execute wls.mac
+/run/beamOn 3
+
+

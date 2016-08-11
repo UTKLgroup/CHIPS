@@ -1,0 +1,170 @@
+/LXe/detector/MainScintYield 0
+/LXe/detector/housingThickness 0.0635 cm
+
+/LXe/detector/Depth 60. m
+/LXe/detector/ScintR 2.09 m
+/LXe/detector/ScintH 2.16 m
+
+/LXe/detector/VetoDR 0.5 m
+/LXe/detector/VetoDH 0.5 m
+
+## liner reflectivity measured by Simon
+/LXe/detector/scintreflectivity 0.03
+/LXe/detector/vetoreflectivity 0.03
+/LXe/detector/PMTBaseReflectivity 0.
+/LXe/detector/HousingLobeReflectivity 0.
+
+/LXe/detector/PMTsOnTop 1
+/LXe/detector/PMTsOnBottom 1
+/LXe/detector/PMTsOnPositiveX 1
+/LXe/detector/PMTsOnNegativeX 1
+
+## angle at which side PMTs look
+##  X        Y     aimed     result
+##  180      0       0      straight down
+##  0        0       1      horizontal towards axis
+##  41.4     0       1      diagonal down towards axis
+
+/LXe/detector/SidePMTsRotationAngleX 41.4
+/LXe/detector/SidePMTsRotationAngleY 0.
+/LXe/detector/SidePMTsAimedAtAxis 1
+
+## angle at which top / bottom PMTs look
+##  Y          result
+##  0         straight up
+##  180       straight down
+##  -131.4    diagonal down towards axis
+
+/LXe/detector/TopPMTsRotationAngleY -131.4
+/LXe/detector/BottomPMTsRotationAngleY -131.4
+
+
+## single mirror
+/LXe/detector/PutMirror 0
+/LXe/detector/MirrorX0 2150.
+/LXe/detector/MirrorY0 -0.
+/LXe/detector/MirrorZ0 -2350.
+/LXe/detector/MirrorLA 400.
+/LXe/detector/MirrorLB 400.
+/LXe/detector/MirrorLC 10.
+/LXe/detector/MirrorAngle 42.2
+
+
+## double mirror
+
+#/LXe/detector/PutMirror 1
+#/LXe/detector/MirrorX0 2050.
+#/LXe/detector/MirrorY0 -0.
+#/LXe/detector/MirrorZ0 -2550.
+#/LXe/detector/MirrorLA 400.
+#/LXe/detector/MirrorLB 400.
+#/LXe/detector/MirrorLC 10.
+#/LXe/detector/MirrorAngle 0.
+
+/LXe/detector/PutMirror2 0
+/LXe/detector/Mirror2X0 2450.
+#/LXe/detector/Mirror2X0 0.
+/LXe/detector/Mirror2Y0 -0.
+/LXe/detector/Mirror2Z0 -2050.
+/LXe/detector/Mirror2LA 400.
+/LXe/detector/Mirror2LB 400.
+/LXe/detector/Mirror2LC 10.
+/LXe/detector/Mirror2Angle 90.
+
+/LXe/detector/AdHocPMTs 1 # for 1 only produces 4(optimum) + 1(veto) PMTs, 0 equals homogenously populated inside/signal
+# onlu use looking down or turnable
+
+### looking down -> 
+#/LXe/detector/AdHocPMT1x -1640.63
+#/LXe/detector/AdHocPMT1y 0.
+#/LXe/detector/AdHocPMT1z 1500.
+#/LXe/detector/AdHocPMT1angleX 180.
+#/LXe/detector/AdHocPMT1angleY 0.
+
+#/LXe/detector/AdHocPMT2x -1640.63
+#/LXe/detector/AdHocPMT2y 0.
+#/LXe/detector/AdHocPMT2z 1400.
+#/LXe/detector/AdHocPMT2angleX 180.
+#/LXe/detector/AdHocPMT2angleY 0.
+
+#/LXe/detector/AdHocPMT3x -1584.73
+#/LXe/detector/AdHocPMT3y 424.63
+#/LXe/detector/AdHocPMT3z 1500.
+#/LXe/detector/AdHocPMT3angleX 180.
+#/LXe/detector/AdHocPMT3angleY 0.
+
+#/LXe/detector/AdHocPMT4x -1584.73
+#/LXe/detector/AdHocPMT4y -424.63
+#/LXe/detector/AdHocPMT4z 1500.
+#/LXe/detector/AdHocPMT4angleX 180.
+#/LXe/detector/AdHocPMT4angleY 0.
+
+#/LXe/detector/AdHocPMT5x 1640.63
+#/LXe/detector/AdHocPMT5y 0.
+#/LXe/detector/AdHocPMT5z -1500.
+#/LXe/detector/AdHocPMT5angleX 180.
+#/LXe/detector/AdHocPMT5angleY 0.
+
+
+### turnable
+/LXe/detector/AdHocPMT1x -2300.
+/LXe/detector/AdHocPMT1y 214.15
+/LXe/detector/AdHocPMT1z 2000.
+/LXe/detector/AdHocPMT1angleX 0.
+/LXe/detector/AdHocPMT1angleY -132.2
+
+/LXe/detector/AdHocPMT2x -2300.
+/LXe/detector/AdHocPMT2y -214.15
+/LXe/detector/AdHocPMT2z 2000.
+/LXe/detector/AdHocPMT2angleX 0.
+/LXe/detector/AdHocPMT2angleY -132.2
+
+/LXe/detector/AdHocPMT3x -1900.
+/LXe/detector/AdHocPMT3y 214.15
+/LXe/detector/AdHocPMT3z 2400.
+/LXe/detector/AdHocPMT3angleX 0.
+/LXe/detector/AdHocPMT3angleY -132.2
+
+/LXe/detector/AdHocPMT4x -1900.
+/LXe/detector/AdHocPMT4y -214.15
+/LXe/detector/AdHocPMT4z 2400.
+/LXe/detector/AdHocPMT4angleX 0.
+/LXe/detector/AdHocPMT4angleY -132.2
+
+## veto PMT above single mirror
+/LXe/detector/AdHocPMT5x 2100.
+/LXe/detector/AdHocPMT5y 0.
+/LXe/detector/AdHocPMT5z -2200.
+/LXe/detector/AdHocPMT5angleX 0.
+/LXe/detector/AdHocPMT5angleY -132.2
+
+## veto PMT above double mirror
+#/LXe/detector/AdHocPMT5x 2300.
+#/LXe/detector/AdHocPMT5y 0.
+#/LXe/detector/AdHocPMT5z -2350.
+#/LXe/detector/AdHocPMT5angleX 0.
+#/LXe/detector/AdHocPMT5angleY -222.2
+
+
+
+
+# 12-in PMT
+#/LXe/detector/pmtRadius 15.2 cm 
+# 10-in PMT
+#/LXe/detector/pmtRadius 0.127 m
+/LXe/detector/pmtRadius 0.17 m
+/LXe/detector/VetoPmtDR 0.22 m
+/LXe/detector/VetoPmtDZ 0.22 m
+
+/LXe/detector/PmtDR 0.3 m
+/LXe/detector/PmtDZ 0.3 m
+
+/LXe/pmtThreshold 3
+/LXe/detector/pmtQE 0.1
+
+/LXe/detector/SaveHitOn 1
+
+/LXe/detector/update
+#/LXe/detector/PrintSettings 
+
+/LXe/detector/use_particle_gun 0

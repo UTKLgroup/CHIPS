@@ -1,0 +1,16 @@
+#Resets all defaults
+/LXe/detector/defaults
+/LXe/detector/update
+
+#/gun/particle gamma
+#/gun/energy 511 keV
+
+/LXe/eventVerbose 0 
+/tracking/storeTrajectory 1
+
+#This causes the primary particle to be killed after its first step
+# set to true to reduce memory (Junting)
+/LXe/oneStepPrimaries true
+
+#disable the visulization
+/vis/enable true

@@ -1,0 +1,27 @@
+/LXe/detector/MainScintYield 0
+/LXe/detector/housingThickness 0.000635 m
+
+/LXe/detector/ScintR 25. m
+/LXe/detector/ScintH 10. m
+
+/LXe/detector/VetoDR 2. m
+/LXe/detector/VetoDH 2. m
+/LXe/detector/scintreflectivity 0.2
+/LXe/detector/vetoreflectivity 0.98
+
+# 12-in PMT
+#/LXe/detector/pmtRadius 152. mm 
+# 10-in PMT
+/LXe/detector/pmtRadius 0.127 m
+/LXe/detector/PmtDR 0.3 m
+/LXe/detector/PmtDZ 0.3 m
+/LXe/detector/VetoPmtDR 0.6 m
+/LXe/detector/VetoPmtDZ 0.6 m
+
+/LXe/pmtThreshold 3
+/LXe/detector/pmtQE 0.1
+
+/LXe/detector/SaveHitOn 1
+
+/LXe/detector/update
+#/LXe/detector/PrintSettings 

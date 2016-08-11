@@ -1,0 +1,62 @@
+#################
+##
+## This example demonstrates the cerenkov process by using a 200 MeV mu+
+## particle in a geometry configuration that shows the cerenkov cone
+## and pmts hit by it.
+##
+#################
+
+/control/execute defaults.mac
+
+#This currently causes the program to crash due to a bug in geant4
+#Uncomment it once that bug has been fixed. Until then, to use this,
+#modify LXePhysicsList to disable scintillation.
+#/process/inactivate Scintillation
+/LXe/detector/MainScintYield 0
+/LXe/detector/nx 20
+/LXe/detector/ny 20
+/LXe/detector/nz 10
+#/LXe/detector/dimensions 60 60 25 cm
+/LXe/detector/volumes/sphere 0
+
+/LXe/detector/housingThickness 0.0635 cm
+/LXe/detector/ScintR 1200. cm
+/LXe/detector/ScintH 1000. cm
+/LXe/detector/VetoDR 100. cm
+/LXe/detector/VetoDH 100. cm
+/LXe/detector/reflectivity 0.8
+
+# 12-in PMT
+#/LXe/detector/pmtRadius 15.2 cm 
+# 10-in PMT
+/LXe/detector/pmtRadius 12.7 cm
+/LXe/detector/PmtDR 86. cm
+/LXe/detector/PmtDZ 86. cm
+/LXe/detector/VetoPmtDR 344. cm
+/LXe/detector/VetoPmtDZ 344. cm
+
+/LXe/detector/update
+#/LXe/detector/PrintSettings 
+
+/CRY/useCRY 0
+#/gun/particle mu-
+/gun/particle e+
+/gun/energy 1000 MeV
+/gun/position 0 0 10 m
+/gun/direction 0 0 -1
+#/gun/position 13.5 0 8 m
+#/gun/direction -1 0 -1
+
+#This causes the primary particle to be killed after its first step in the
+#scintillator volume. Thus preventing the cerenkov cone to fill in.
+#/LXe/oneStepPrimaries true
+
+#reset from a random seed that shows a good cone
+/random/resetEngineFrom random/goodCerenkov.rndm
+
+/LXe/eventVerbose 2
+
+#disable the visulization
+#/vis/enable false
+
+#/run/beamOn 1

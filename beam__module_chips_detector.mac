@@ -1,0 +1,42 @@
+/CRY/useCRY 0
+
+/gun/particle mu-
+/gun/energy 1500 MeV
+
+#/gun/position 2. 0. -19.9613 m
+/gun/position 2. 0. -61.9613 m
+/gun/direction -1. 0. 0.
+
+#/gun/position 0. 0. -59.9613 m
+#/gun/direction 0. 0. -1.
+
+
+#### general particle source
+
+/gps/particle mu-
+
+
+### vertex in a rectangle (X, Y)
+
+#/gps/position 2. 0. -19.9613 m
+/gps/position 2. 0. -61.9613 m
+/gps/pos/type Plane
+/gps/pos/shape Rectangle
+
+# half size of X and Y sides
+/gps/pos/halfx 1.59 m
+/gps/pos/halfy 1.66 m
+
+# direction of X axis
+/gps/pos/rot1 0 0 1
+
+# direction of Y axis
+/gps/pos/rot2 0 1 0
+
+/gps/direction -1. 0. 0.
+
+# gaussian energy distribution
+/gps/ene/type Gauss
+/gps/ene/mono 1500 MeV
+/gps/ene/sigma 200 MeV
+

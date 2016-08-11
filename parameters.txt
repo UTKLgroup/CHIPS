@@ -1,0 +1,12 @@
+## * detector full chips
+## * 300 evs, 51 ev/ora, 50 ev/job    -->    166 eventi (30 / job) in mezz' ora
+## * 10000 evs, 151 ev/ora, 150 ev/job, subb=150    --> ~1000 eventi (16/job)
+## * detector chips module
+## * 10000 evs, 151 ev/ora, 150 ev/job, subb=20    --> ~378 eventi (6/job)
+n_all_events 10000
+n_events_per_hour 151
+n_events_per_job 1500
+x0    0.
+y0    0.
+z0    0.
+E   1000.
